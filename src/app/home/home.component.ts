@@ -22,9 +22,9 @@ export class HomeComponent implements OnInit {
       .get(
         'https://api.themoviedb.org/3/movie/popular?api_key=466279f06d7f82ea9024d440431f8663&language=en-US&page=1'
       )
-      .subscribe((data) => {
-        this.getJsonValue = data;
-        console.log(data);
+      .subscribe((data: any) => {
+        this.getJsonValue = data.results;
+        console.log(data.results);
       });
   }
   public postMethod() {
