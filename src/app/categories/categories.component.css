@@ -1,0 +1,27 @@
+.category {
+  margin-top: 82px;
+}
+.category .category-slider {
+  display: flex;
+  gap: 12px;
+  overflow: auto;
+}
+
+.category .category-slider div {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.category .category-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 13px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.category .category-list .category-card img {
+  width: 100%;
+  border-radius: 16px;
+}

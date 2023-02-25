@@ -8,6 +8,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { TabbarComponent } from './tabbar/tabbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SliderComponent } from './slider/slider.component';
+import { CategoriesComponent } from './categories/categories.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +16,7 @@ import { SliderComponent } from './slider/slider.component';
     LoadingComponent,
     TabbarComponent,
     SliderComponent,
+    CategoriesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
