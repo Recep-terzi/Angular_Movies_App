@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { LoadingComponent } from './loading/loading.component';
 import { TabbarComponent } from './tabbar/tabbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SliderComponent } from './slider/slider.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoadingComponent,
     TabbarComponent,
+    SliderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
