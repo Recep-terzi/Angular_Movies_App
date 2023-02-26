@@ -36,4 +36,13 @@ export class HomeComponent implements OnInit {
         this.postJsonValue.push(data);
       });
   }
+  selectPage = 'Home';
+
+  selectPageClick(value: string) {
+    this.selectPage = value;
+  }
+  public loading = true;
+  loadingTime = setTimeout(() => {
+    this.loading = false;
+  }, 1000);
 }

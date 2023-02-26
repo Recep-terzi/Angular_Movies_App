@@ -1,19 +1,35 @@
 <div class="container">
-    <div class="top-bar">
-        <div class="hours">9:41</div>
-        <div class="telephone-icon">
-            <i class="fa-solid fa-signal"></i>
-            <i class="fa-sharp fa-solid fa-wifi"></i>
-            <i class="fa-solid fa-battery-full"></i>
+    <app-top-bar></app-top-bar>
+    <div *ngIf="loading">
+        <app-loading></app-loading>
+    </div>
+    <div *ngIf="!loading">
+        <div *ngIf="selectPage === 'Home'">
+            <h2 class="title">What dou you want to watch?</h2>
+            <div class="search-input">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <app-slider></app-slider>
+            <app-categories></app-categories>
+        </div>
+        <div *ngIf="selectPage === 'Search'">
+            <app-search-page></app-search-page>
+        </div>
+        <div *ngIf="selectPage === 'WatchList'">
+            <app-watch-list></app-watch-list>
         </div>
     </div>
-    <h2 class="title">What dou you want to watch?</h2>
-    <div class="search-input">
-        <input type="text" placeholder="Search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
 
-    <app-slider></app-slider>
-    <app-categories></app-categories>
 </div>
-<app-tabbar></app-tabbar>
+<div id="tabbar">
+    <div class="home" class="{{selectPage === 'Home' ? 'active' : ''}}">
+        <i class="fa-solid fa-magnifying-glass" (click)="selectPageClick('Home')"></i>Home
+    </div>
+    <div class="home" class="{{selectPage === 'Search' ? 'active' : ''}}">
+        <i class="fa-solid fa-magnifying-glass" (click)="selectPageClick('Search')"></i>Search
+    </div>
+    <div class="home" class="{{selectPage === 'WatchList' ? 'active' : ''}}">
+        <i class="fa-solid fa-bookmark" (click)="selectPageClick('WatchList')"></i>Watch List
+    </div>
+</div>
