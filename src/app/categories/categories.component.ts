@@ -16,6 +16,10 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
     this.getMethod();
   }
+  public getCategory(value: string) {
+    this.getCategorys = value;
+    console.log(this.getCategorys);
+  }
   public getMethod() {
     this.http
       .get(
@@ -23,14 +27,7 @@ export class CategoriesComponent implements OnInit {
       )
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
-        console.log(data.results);
+        console.log(this.getCategorys);
       });
-  }
-  public getCategory(value: string) {
-    this.getCategorys = value;
-    console.log(this.getCategorys);
-    console.log(
-      `https://api.themoviedb.org/3/discover/movie?api_key=466279f06d7f82ea9024d440431f8663&with_genres=${this.getCategorys}`
-    );
   }
 }

@@ -3,14 +3,14 @@
 }
 .category .category-slider {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   overflow: auto;
 }
 
 .category .category-slider div {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   padding-bottom: 10px;
 }
 

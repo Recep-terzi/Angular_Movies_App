@@ -24,24 +24,15 @@ export class HomeComponent implements OnInit {
       )
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
-        console.log(data.results);
       });
   }
-  public postMethod() {
-    this.http
-      .get(
-        'https://api.themoviedb.org/3/movie/popular?api_key=466279f06d7f82ea9024d440431f8663&language=en-US&page=1'
-      )
-      .subscribe((data) => {
-        this.postJsonValue.push(data);
-      });
-  }
+
   selectPage = 'Home';
 
   selectPageClick(value: string) {
     this.selectPage = value;
   }
-  public loading = false;
+  public loading = true;
   loadingTime = setTimeout(() => {
     this.loading = false;
   }, 1000);

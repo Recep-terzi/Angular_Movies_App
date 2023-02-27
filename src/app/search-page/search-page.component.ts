@@ -25,11 +25,9 @@ export class SearchPageComponent {
       )
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
-        console.log(data.results);
       });
   }
   sendit(inputValue: string) {
     this.search = inputValue;
-    console.log(this.search);
   }
 }
