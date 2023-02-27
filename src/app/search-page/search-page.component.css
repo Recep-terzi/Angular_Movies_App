@@ -1,0 +1,109 @@
+.search-page .search-page-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  margin-top: 25px;
+  align-items: center;
+}
+.search-page .search-page-top p {
+  font-size: 16px;
+  color: #ececee;
+}
+.search-input {
+  margin-top: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-input input {
+  background: #3a3f47;
+  border-radius: 16px;
+  border: none;
+  width: 331px;
+  height: 42px;
+  padding: 0 24px;
+
+  color: #fff;
+}
+.search-input input:focus {
+  outline: none;
+}
+.search-input input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+}
+.search-input i {
+  position: absolute;
+  right: 45px;
+  opacity: 0.3;
+}
+.search-data {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 0 10px;
+}
+.search-data .data-img img {
+  width: 95px;
+  height: 120px;
+  border-radius: 16px;
+}
+.search-data .data-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.search-data .data-info .title {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+.search-data .data-info .star,
+.search-data .data-info .year,
+.search-data .data-info .category {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  gap: 5.5px;
+}
+
+.not-find {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 252px;
+  height: 190px;
+}
+.not-find img {
+  margin-bottom: 16px;
+}
+
+.not-find .text1 {
+  margin-bottom: 8px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.12px;
+  text-transform: capitalize;
+  color: #ebebef;
+}
+.not-find .text2 {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.12px;
+  color: #92929d;
+}

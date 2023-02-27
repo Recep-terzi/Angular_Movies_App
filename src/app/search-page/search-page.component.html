@@ -1,1 +1,43 @@
-<p>search-page works!</p>
+<div class="search-page">
+    <div class="search-page-top">
+        <img src="../../assets/arrow-left.svg" alt="">
+        <p>Search</p>
+        <img src="../../assets/info-circle.svg" alt="">
+    </div>
+    <div class="search-input">
+        <input type="text" placeholder="Search" [(ngModel)]="search" (keyup.enter)="sendit(search)">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div *ngIf="getJsonValue.length == 0" class="not-find">
+        <img src="../../assets/Group.svg" alt="">
+        <p class="text1">we are sorry, we can not find the movie :(</p>
+        <p class="text2">Find your movie by Type title, categories, years, etc </p>
+    </div>
+    <div *ngFor="let data of getJsonValue">
+        <div class="search-data" *ngIf="getJsonValue">
+            <div class="data-img">
+                <img src="{{IMG_API}}{{data.poster_path}}" alt="">
+            </div>
+            <div class="data-info">
+                <div class="title">
+                    {{data.original_title}}
+                </div>
+                <div class="star">
+                    <img src="../../assets/Star.svg" alt="">
+                    {{data.vote_average}}
+                </div>
+                <div class="category">
+                    <img src="../../assets/Ticket.svg" alt="">
+
+                    {{data.genre_ids[2] === 878 ? "Science" : "Other"}}
+                </div>
+                <div class="year">
+                    <img src="../../assets/CalendarBlank.svg" alt="">
+                    {{data.release_date}}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

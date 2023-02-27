@@ -11,6 +11,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { WatchListComponent } from './watch-list/watch-list.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { WatchListComponent } from './watch-list/watch-list.component';
     SearchPageComponent,
     WatchListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

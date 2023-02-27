@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   selectPageClick(value: string) {
     this.selectPage = value;
   }
-  public loading = true;
+  public loading = false;
   loadingTime = setTimeout(() => {
     this.loading = false;
   }, 1000);
