@@ -12,6 +12,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { WatchListComponent } from './watch-list/watch-list.component';
 import { FormsModule } from '@angular/forms';
+import { DetailComponent } from './detail/detail.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     TopBarComponent,
     SearchPageComponent,
     WatchListComponent,
+    DetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

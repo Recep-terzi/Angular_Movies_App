@@ -1,10 +1,10 @@
 <div class="slider">
     <div *ngFor="let user of getJsonValue.slice(0,10); index as i">
-        <div class="slider-card">
+        <a class="slider-card" [routerLink]="['/detail', user.id]" (click)="onSelect(user.id)">
             <span>
                 {{i+1}}
             </span>
             <img src="{{IMG_API}}{{user.poster_path}}" alt="">
-        </div>
+        </a>
     </div>
 </div>
