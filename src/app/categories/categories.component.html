@@ -1,12 +1,12 @@
 <div class="category">
     <div class="category-slider">
-        <div (click)="getCategory('35')">Comedy</div>
-        <div (click)="getCategory('80')">Crime</div>
-        <div (click)="getCategory('10751')">Family</div>
-        <div (click)="getCategory('18')">Drama</div>
-        <div (click)="getCategory('27')">Horror</div>
-        <div (click)="getCategory('10749')">Romance</div>
-        <div (click)="getCategory('878')">Science</div>
+        <button (click)="getCategory('35')">Comedy</button>
+        <button (click)="getCategory('80')">Crime</button>
+        <button (click)="getCategory('10751')">Family</button>
+        <button (click)="getCategory('18')">Drama</button>
+        <button (click)="getCategory('27')">Horror</button>
+        <button (click)="getCategory('10749')">Romance</button>
+        <button (click)="getCategory('878')">Science</button>
     </div>
     <div class="category-list">
         <div *ngFor="let user of getJsonValue.slice(0,12); index as i">
