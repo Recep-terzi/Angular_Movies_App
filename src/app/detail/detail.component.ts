@@ -10,7 +10,7 @@ export class DetailComponent implements OnInit {
   public detailId: any;
   public getDetailJson: any;
   IMG_API = 'https://image.tmdb.org/t/p/w1280';
-
+  detailSelect: string = 'About';
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get('id');
@@ -24,7 +24,10 @@ export class DetailComponent implements OnInit {
       )
       .subscribe((data: any) => {
         this.getDetailJson = data;
-        console.log(this.getDetailJson);
       });
+  }
+
+  public selectDetail(value: string) {
+    this.detailSelect = value;
   }
 }

@@ -15,4 +15,25 @@
         <img src={{IMG_API}}{{getDetailJson.backdrop_path}} alt="">
         <p>{{getDetailJson.original_title}}</p>
     </div>
+    <div class="detail-info">
+        <div>
+            <img src="../../assets/CalendarBlank.svg" alt="">
+            {{getDetailJson.release_date.slice(0,4)}}
+        </div>
+        <div>
+            <img src="../../assets/Clock.svg" alt="">
+            {{getDetailJson.runtime}} Minutes
+        </div>
+        <div>
+            <img src="../../assets/Ticket.svg" alt="">
+            {{getDetailJson.genres[0].id === 28 ? "Action" : "Other"}}
+        </div>
+    </div>
+    <div class="detail-select container">
+        <div class="about" (click)="selectDetail('About')" class="{{detailSelect === 'About' ? 'active'  :''}}">About
+            Movie</div>
+        <div class="reviews" (click)="selectDetail('Reviews')" class="{{detailSelect === 'Reviews' ? 'active'  :''}}">
+            Reviews</div>
+        <div class="cast" (click)="selectDetail('Cast')" class="{{detailSelect === 'Cast' ? 'active'  :''}}">Cast</div>
+    </div>
 </div>

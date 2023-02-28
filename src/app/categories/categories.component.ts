@@ -18,7 +18,7 @@ export class CategoriesComponent implements OnInit {
   }
   public getCategory(value: string) {
     this.getCategorys = value;
-    console.log(this.getCategorys);
+    this.getMethod();
   }
   public getMethod() {
     this.http
@@ -27,7 +27,6 @@ export class CategoriesComponent implements OnInit {
       )
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
-        console.log(this.getCategorys);
       });
   }
 }

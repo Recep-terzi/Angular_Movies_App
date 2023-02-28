@@ -18,6 +18,10 @@ export class SearchPageComponent {
   ngOnInit(): void {
     this.getSearchData();
   }
+  sendit(inputValue: string) {
+    this.search = inputValue;
+    this.getSearchData();
+  }
   public getSearchData() {
     this.http
       .get(
@@ -26,8 +30,5 @@ export class SearchPageComponent {
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
       });
-  }
-  sendit(inputValue: string) {
-    this.search = inputValue;
   }
 }
