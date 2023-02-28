@@ -88,6 +88,7 @@
   margin: auto;
   width: 252px;
   height: 190px;
+  z-index: -1;
 }
 .not-find img {
   margin-bottom: 16px;

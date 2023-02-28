@@ -18,8 +18,13 @@
 .detail-main .detail-image {
   width: 100%;
   height: 210px;
+}
+.detail-main .detail-image img {
   object-fit: cover;
   border-radius: 0 0 16px 16px;
+  width: 100%;
+  height: 100%;
+  object-position: 10% 10%;
 }
 .detail-main .detail-poster {
   display: flex;
