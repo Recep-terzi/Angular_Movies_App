@@ -8,3 +8,41 @@
 .watch-list .watch-list-top .visible-img {
   visibility: hidden;
 }
+.search-watchListJson {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 0 10px;
+  margin-top: 52px;
+}
+.search-watchListJson {
+  text-decoration: none;
+  color: #fff;
+}
+.search-watchListJson .watchListJson-img img {
+  width: 95px;
+  height: 120px;
+  border-radius: 16px;
+}
+.search-watchListJson .watchListJson-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.search-watchListJson .watchListJson-info .title {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+.search-watchListJson .watchListJson-info .star,
+.search-watchListJson .watchListJson-info .year,
+.search-watchListJson .watchListJson-info .category {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  gap: 5.5px;
+}

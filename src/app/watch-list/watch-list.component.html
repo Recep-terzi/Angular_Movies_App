@@ -5,4 +5,29 @@
         <img src="../../assets/info-circle.svg" alt="" class="visible-img">
 
     </div>
+    <a class="search-watchListJson" *ngIf="watchListJson" [routerLink]="['/detail', watchListJson.id]">
+        <div class="watchListJson-img">
+            <img src="{{IMG_API}}{{watchListJson.poster_path}}" alt="">
+        </div>
+        <div class="watchListJson-info">
+            <div class="title">
+                {{watchListJson.original_title}}
+            </div>
+            <div class="star">
+                <img src="../../assets/Star.svg" alt="">
+                {{watchListJson.vote_average}}
+            </div>
+            <div class="category">
+                <img src="../../assets/Ticket.svg" alt="">
+
+                {{watchListJson.genres[2] === 878 ? "Science" : "Other"}}
+            </div>
+            <div class="year">
+                <img src="../../assets/CalendarBlank.svg" alt="">
+                {{watchListJson.release_date}}
+            </div>
+        </div>
+    </a>
+
+
 </div>

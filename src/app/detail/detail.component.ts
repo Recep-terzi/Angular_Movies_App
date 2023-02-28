@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import * as e from 'express';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -11,6 +12,7 @@ export class DetailComponent implements OnInit {
   public getDetailJson: any;
   public getReviewsJson: any;
   public getCastJson: any;
+  public watchList: Array<any> = [];
   IMG_API = 'https://image.tmdb.org/t/p/w1280';
   detailSelect: string = 'About';
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
@@ -50,5 +52,8 @@ export class DetailComponent implements OnInit {
   }
   public selectDetail(value: string) {
     this.detailSelect = value;
+  }
+  watchListSave() {
+    localStorage.setItem('watchList', JSON.stringify(this.getDetailJson));
   }
 }
