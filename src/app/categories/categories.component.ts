@@ -32,6 +32,5 @@ export class CategoriesComponent implements OnInit {
   }
   onSelect(id: number) {
     this.router.navigate(['/detail', id]);
-    console.log(id);
   }
 }

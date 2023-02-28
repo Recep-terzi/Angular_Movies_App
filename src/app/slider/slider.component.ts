@@ -25,12 +25,10 @@ export class SliderComponent implements OnInit {
       )
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
-        console.log(data.results);
       });
   }
 
   onSelect(id: number) {
     this.router.navigate(['/detail', id]);
-    console.log(id);
   }
 }

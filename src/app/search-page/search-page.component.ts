@@ -34,6 +34,5 @@ export class SearchPageComponent {
   }
   onSelect(id: number) {
     this.router.navigate(['/detail', id]);
-    console.log(id);
   }
 }

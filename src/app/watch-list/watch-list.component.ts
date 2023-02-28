@@ -19,6 +19,5 @@ export class WatchListComponent implements OnInit {
     this.detailId = id;
     let data: any = localStorage.getItem('watchList');
     this.watchListJson = JSON.parse(data);
-    console.log(this.watchListJson);
   }
 }
