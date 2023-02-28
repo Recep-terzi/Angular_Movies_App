@@ -6,6 +6,7 @@
   position: relative;
   gap: 23px;
   padding: 10px;
+  overflow-y: hidden;
 }
 .slider::-webkit-scrollbar {
   display: none;
