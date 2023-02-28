@@ -36,4 +36,27 @@
             Reviews</div>
         <div class="cast" (click)="selectDetail('Cast')" class="{{detailSelect === 'Cast' ? 'active'  :''}}">Cast</div>
     </div>
+    <div class="container">
+        <div *ngIf="detailSelect === 'About'" class="about-movie">
+            {{getDetailJson.overview}}
+        </div>
+        <div *ngIf="detailSelect === 'Reviews'" class="reviews-movie">
+            <div *ngFor="let review of getReviewsJson" class="reviews">
+                <div class="review-left">
+                    <img src={{IMG_API}}{{review.author_details.avatar_path}} alt="">
+                    <p>{{review.author_details.rating}}</p>
+                </div>
+                <div class="review-right">
+                    <p class="author-name">{{review.author}}</p>
+                    <p class="content">{{review.content.slice(0,100)}} ...</p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="detailSelect === 'Cast'" class="cast-movie">
+            <div class="cast" *ngFor="let cast of getCastJson">
+                <img src={{IMG_API}}{{cast.profile_path}} alt="">
+                <p>{{cast.name}}</p>
+            </div>
+        </div>
+    </div>
 </div>

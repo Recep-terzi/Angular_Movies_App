@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailComponent implements OnInit {
   public detailId: any;
   public getDetailJson: any;
+  public getReviewsJson: any;
+  public getCastJson: any;
   IMG_API = 'https://image.tmdb.org/t/p/w1280';
   detailSelect: string = 'About';
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
@@ -16,17 +18,36 @@ export class DetailComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('id');
     this.detailId = id;
     this.getMethod();
+    this.getReviews();
+    this.getCast();
   }
   public getMethod() {
     this.http
       .get(
-        `https://api.themoviedb.org/3/movie/${this.detailId}?api_key=466279f06d7f82ea9024d440431f8663&language=tr-TR`
+        `https://api.themoviedb.org/3/movie/${this.detailId}?api_key=466279f06d7f82ea9024d440431f8663`
       )
       .subscribe((data: any) => {
         this.getDetailJson = data;
       });
   }
-
+  public getReviews() {
+    this.http
+      .get(
+        `https://api.themoviedb.org/3/movie/${this.detailId}/reviews?api_key=466279f06d7f82ea9024d440431f8663&language=en-US&page=1`
+      )
+      .subscribe((data: any) => {
+        this.getReviewsJson = data.results;
+      });
+  }
+  public getCast() {
+    this.http
+      .get(
+        `https://api.themoviedb.org/3/movie/${this.detailId}/credits?api_key=466279f06d7f82ea9024d440431f8663&language=en-US`
+      )
+      .subscribe((data: any) => {
+        this.getCastJson = data.cast;
+      });
+  }
   public selectDetail(value: string) {
     this.detailSelect = value;
   }
