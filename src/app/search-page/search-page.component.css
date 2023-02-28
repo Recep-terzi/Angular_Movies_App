@@ -43,6 +43,10 @@
   margin-top: 24px;
   padding: 0 10px;
 }
+.search-data {
+  text-decoration: none;
+  color: #fff;
+}
 .search-data .data-img img {
   width: 95px;
   height: 120px;

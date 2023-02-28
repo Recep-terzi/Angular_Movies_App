@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-page',
@@ -12,7 +13,7 @@ export class SearchPageComponent {
   search: string = '';
   IMG_API = 'https://image.tmdb.org/t/p/w1280';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.getJsonValue = [];
   }
   ngOnInit(): void {
@@ -30,5 +31,9 @@ export class SearchPageComponent {
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
       });
+  }
+  onSelect(id: number) {
+    this.router.navigate(['/detail', id]);
+    console.log(id);
   }
 }

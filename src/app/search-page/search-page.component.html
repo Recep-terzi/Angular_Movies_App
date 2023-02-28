@@ -14,7 +14,7 @@
         <p class="text2">Find your movie by Type title, categories, years, etc </p>
     </div>
     <div *ngFor="let data of getJsonValue">
-        <div class="search-data" *ngIf="getJsonValue">
+        <a class="search-data" *ngIf="getJsonValue" [routerLink]="['/detail', data.id]" (click)="onSelect(data.id)">
             <div class="data-img">
                 <img src="{{IMG_API}}{{data.poster_path}}" alt="">
             </div>
@@ -36,7 +36,7 @@
                     {{data.release_date}}
                 </div>
             </div>
-        </div>
+        </a>
 
 
     </div>

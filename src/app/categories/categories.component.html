@@ -10,9 +10,9 @@
     </div>
     <div class="category-list">
         <div *ngFor="let user of getJsonValue.slice(0,12); index as i">
-            <div class="category-card">
+            <a class="category-card" [routerLink]="['/detail', user.id]" (click)="onSelect(user.id)">
                 <img src="{{IMG_API}}{{user.poster_path}}" alt="">
-            </div>
+            </a>
         </div>
     </div>
 </div>

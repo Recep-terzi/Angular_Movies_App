@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -10,7 +11,7 @@ export class CategoriesComponent implements OnInit {
   getCategorys = '';
   IMG_API = 'https://image.tmdb.org/t/p/w1280';
   public getJsonValue: any;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.getJsonValue = [];
   }
   ngOnInit(): void {
@@ -28,5 +29,9 @@ export class CategoriesComponent implements OnInit {
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
       });
+  }
+  onSelect(id: number) {
+    this.router.navigate(['/detail', id]);
+    console.log(id);
   }
 }
