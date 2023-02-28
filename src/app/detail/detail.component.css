@@ -23,7 +23,7 @@
 }
 .detail-main .detail-poster {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   margin-top: -70px;
   gap: 12px;
 }
