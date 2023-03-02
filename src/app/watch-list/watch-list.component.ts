@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/enviroments.api';
 
 @Component({
   selector: 'app-watch-list',

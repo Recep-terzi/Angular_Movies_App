@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import axios from 'axios';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/enviroments.api';
+import { DataService } from '../Service/data.service';
 
 @Component({
   selector: 'app-home',
@@ -9,19 +9,8 @@ import { environment } from 'src/environments/environment.development';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  public getJsonValue: any;
-  constructor(private http: HttpClient) {
-    this.getJsonValue = [];
-  }
-  ngOnInit(): void {
-    this.getMethod();
-  }
-
-  public getMethod() {
-    this.http.get(environment.apiUrl).subscribe((data: any) => {
-      this.getJsonValue = data.results;
-    });
-  }
+  constructor(private http: HttpClient, private dataService: DataService) {}
+  ngOnInit(): void {}
 
   selectPage = 'Home';
 

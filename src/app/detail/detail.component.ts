@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as e from 'express';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/enviroments.api';
+environment;
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',

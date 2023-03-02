@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.development';
-
+import { environment } from 'src/environments/enviroments.api';
 @Component({
   selector: 'app-search-page',
   templateUrl: './search-page.component.html',

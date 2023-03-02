@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.development';
-
+import { environment } from 'src/environments/enviroments.api';
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -24,9 +23,7 @@ export class CategoriesComponent implements OnInit {
   }
   public getMethod() {
     this.http
-      .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=466279f06d7f82ea9024d440431f8663&with_genres=${this.getCategorys}`
-      )
+      .get(environment.categoryApiUrl + `with_genres=${this.getCategorys}`)
       .subscribe((data: any) => {
         this.getJsonValue = data.results;
       });
