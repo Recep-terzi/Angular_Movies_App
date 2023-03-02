@@ -10,7 +10,6 @@ import { environment } from 'src/environments/environment.development';
 })
 export class SliderComponent implements OnInit {
   public getJsonValue: any;
-  public postJsonValue: Array<any> = [];
   IMG_API = environment.IMG_API;
   constructor(private http: HttpClient, private router: Router) {
     this.getJsonValue = [];

@@ -13,7 +13,6 @@ export class DetailComponent implements OnInit {
   public getDetailJson: any;
   public getReviewsJson: any;
   public getCastJson: any;
-  public watchList: Array<any> = [];
   IMG_API = environment.IMG_API;
   detailSelect: string = 'About';
   constructor(private route: ActivatedRoute, private http: HttpClient) {}

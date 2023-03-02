@@ -10,7 +10,6 @@ import { environment } from 'src/environments/environment.development';
 })
 export class SearchPageComponent {
   public getJsonValue: any;
-  public postJsonValue: Array<any> = [];
   search: string = '';
   IMG_API = environment.IMG_API;
 

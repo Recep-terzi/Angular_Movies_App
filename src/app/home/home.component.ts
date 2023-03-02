@@ -10,7 +10,6 @@ import { environment } from 'src/environments/environment.development';
 })
 export class HomeComponent implements OnInit {
   public getJsonValue: any;
-  public postJsonValue: Array<any> = [];
   constructor(private http: HttpClient) {
     this.getJsonValue = [];
   }
