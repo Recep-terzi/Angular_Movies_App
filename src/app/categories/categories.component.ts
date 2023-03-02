@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-categories',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CategoriesComponent implements OnInit {
   getCategorys = '';
-  IMG_API = 'https://image.tmdb.org/t/p/w1280';
+  IMG_API = environment.IMG_API;
   public getJsonValue: any;
   constructor(private http: HttpClient, private router: Router) {
     this.getJsonValue = [];

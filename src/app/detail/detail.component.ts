@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as e from 'express';
+import { environment } from 'src/environments/environment.development';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -13,7 +14,7 @@ export class DetailComponent implements OnInit {
   public getReviewsJson: any;
   public getCastJson: any;
   public watchList: Array<any> = [];
-  IMG_API = 'https://image.tmdb.org/t/p/w1280';
+  IMG_API = environment.IMG_API;
   detailSelect: string = 'About';
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
   ngOnInit(): void {

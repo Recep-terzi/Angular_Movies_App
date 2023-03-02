@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-home',
@@ -18,13 +19,9 @@ export class HomeComponent implements OnInit {
   }
 
   public getMethod() {
-    this.http
-      .get(
-        'https://api.themoviedb.org/3/movie/popular?api_key=466279f06d7f82ea9024d440431f8663&language=en-US&page=1'
-      )
-      .subscribe((data: any) => {
-        this.getJsonValue = data.results;
-      });
+    this.http.get(environment.apiUrl).subscribe((data: any) => {
+      this.getJsonValue = data.results;
+    });
   }
 
   selectPage = 'Home';

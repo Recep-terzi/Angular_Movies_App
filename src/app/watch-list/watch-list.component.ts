@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-watch-list',
@@ -11,7 +12,7 @@ export class WatchListComponent implements OnInit {
   public watchListJson: any;
   public detailId: any;
 
-  IMG_API = 'https://image.tmdb.org/t/p/w1280';
+  IMG_API = environment.IMG_API;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
   ngOnInit(): void {

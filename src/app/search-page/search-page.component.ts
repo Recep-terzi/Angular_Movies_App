@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-search-page',
@@ -11,7 +12,7 @@ export class SearchPageComponent {
   public getJsonValue: any;
   public postJsonValue: Array<any> = [];
   search: string = '';
-  IMG_API = 'https://image.tmdb.org/t/p/w1280';
+  IMG_API = environment.IMG_API;
 
   constructor(private http: HttpClient, private router: Router) {
     this.getJsonValue = [];
